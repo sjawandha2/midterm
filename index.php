@@ -61,6 +61,14 @@ $f3->route('GET|POST /survey', function ($f3) {
     echo $view->render('views/surveypage.html');
 });
 
+// when click next it goes to summary page
+$f3->route('GET|POST /summary', function () {
+
+    //Display a views
+    $view = new Template();
+    echo $view->render('views/summary.html');
+
+});
 
 //Run Fat-Free
 $f3->run();
