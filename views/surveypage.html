@@ -13,9 +13,7 @@
 <body>
 <h1>Midterm Survey</h1>
 <form method="post" action="#">
-    <label>Name:
-        <input type="text" name="name" value="{{@name}}">
-    </label>
+    <label>Name:<input type="text" name="name" value="{{@name}}"></label>
     <check if="{{ @errors['name'] }}">
         <span class="err">{{ @errors['name'] }}</span>
     </check><br><br>
@@ -34,8 +32,8 @@
         </repeat>
     </p>
 
+    //submit button
     <input type="submit" value="Place Order">
-
 </form>
 </body>
 </html>
