@@ -16,13 +16,15 @@
     <label>Name:<input type="text" name="name" value="{{@name}}"></label>
     <check if="{{ @errors['name'] }}">
         <span class="err">{{ @errors['name'] }}</span>
-    </check><br><br>
+    </check>
+    <br><br>
 
     <!-- Add midterm checkboxes here -->
     <p>Check all that apply:
         <check if="{{ @errors['midterm'] }}">
             <span class="err">{{ @errors['midterm'] }}</span>
-        </check><br>
+        </check>
+        <br>
         <repeat group="{{ @midterms}}" value="{{ @mid }}">
             <label><input type="checkbox" name="midterm[]" value="{{ @mid }}"
                 <check if="{{ !empty(@midterm) && in_array(@mid, @midterm) }}">
@@ -32,8 +34,7 @@
         </repeat>
     </p>
 
-    //submit button
-    <input type="submit" value="Place Order">
+    <input type="submit" value="Submit">
 </form>
 </body>
 </html>
